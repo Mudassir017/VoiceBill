@@ -1,0 +1,9 @@
+node_modules/
+target/
+*.env
+.env
+*.log
+c.txt
+cookies.txt
+.DS_Store
+dist/

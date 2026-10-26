@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --color-lavender-whisper: #f0d7ff;
+  --color-forest-ink: #034f46;
+  --color-ember-glow: #ffa946;
+  --color-vast-ink: #1a1a1a;
+  --color-lumen-cream: #ffffeb;
+  --color-lumen-stone: #e4e4d0;
+  --color-fog: #8a8a80;
+  --color-charcoal: #222222;
+  --color-pure-white: #ffffff;
+
+  --font-eb-garamond: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+  --font-figtree: 'Figtree', 'Inter', system-ui, sans-serif;
+
+  --radius-cards: 32px;
+  --radius-buttons: 12px;
+  --radius-badges: 9999px;
+}
+
+.dark {
+  --color-lumen-cream: #1a1a1a;
+  --color-vast-ink: #ffffeb;
+}
+
+@theme inline {
+  --color-lavender-whisper: var(--color-lavender-whisper);
+  --color-forest-ink: var(--color-forest-ink);
+  --color-ember-glow: var(--color-ember-glow);
+  --color-vast-ink: var(--color-vast-ink);
+  --color-lumen-cream: var(--color-lumen-cream);
+  --color-lumen-stone: var(--color-lumen-stone);
+  --color-fog: var(--color-fog);
+  --color-charcoal: var(--color-charcoal);
+  --color-pure-white: var(--color-pure-white);
+  --font-eb-garamond: var(--font-eb-garamond);
+  --font-figtree: var(--font-figtree);
+}
+
+body {
+  font-family: var(--font-figtree);
+  background-color: var(--color-lumen-cream);
+  color: var(--color-vast-ink);
+}

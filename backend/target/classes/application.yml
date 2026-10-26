@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: voicebill-backend
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/voicebill?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:mudassir1786}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  security:
+    filter:
+      dispatcher-types: async,error,request
+
+server:
+  port: ${SERVER_PORT:8080}
+
+app:
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173}
+  jwt:
+    secret: ${JWT_SECRET:H21eX8otvKxpqzzVwQtlrp+YPZanrLTcRfstfXnniGk=}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+
+openai:
+  api-key: ${OPENAI_API_KEY:}
+  model: ${OPENAI_MODEL:gpt-4o-mini}
